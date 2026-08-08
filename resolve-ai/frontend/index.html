@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>ResolveAI</title>
+
+    <link rel="stylesheet"
+          href="style.css">
+
+</head>
+
+
+<body>
+
+<div class="container">
+
+    <h1>ResolveAI</h1>
+
+    <p>
+        Customer Experience Intelligence &
+        Autonomous Dispute Resolution
+    </p>
+
+
+    <div class="dashboard">
+
+        <div class="card">
+            <h3>Total</h3>
+            <span id="total">0</span>
+        </div>
+
+        <div class="card">
+            <h3>Resolved</h3>
+            <span id="resolved">0</span>
+        </div>
+
+        <div class="card">
+            <h3>Escalated</h3>
+            <span id="escalated">0</span>
+        </div>
+
+        <div class="card">
+            <h3>Automation</h3>
+            <span id="automation">0%</span>
+        </div>
+
+    </div>
+
+
+    <div class="panel">
+
+        <h2>Submit Dispute</h2>
+
+        <label>Customer ID</label>
+
+        <input
+            id="customer"
+            value="CUS001"
+        >
+
+
+        <label>Order ID</label>
+
+        <input
+            id="order"
+            value="ORD1001"
+        >
+
+
+        <label>Complaint</label>
+
+        <textarea
+            id="message"
+            placeholder="Enter customer complaint..."
+        ></textarea>
+
+
+        <button
+            onclick="submitDispute()"
+        >
+            Analyze & Resolve
+        </button>
+
+    </div>
+
+
+    <div
+        id="result"
+        class="panel"
+    ></div>
+
+
+    <div class="panel">
+
+        <h2>Recent Disputes</h2>
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>ID</th>
+                    <th>Category</th>
+                    <th>Intent</th>
+                    <th>Status</th>
+                    <th>Decision</th>
+
+                </tr>
+
+            </thead>
+
+
+            <tbody
+                id="table"
+            ></tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+
+<script src="app.js"></script>
+
+</body>
+
+</html>
